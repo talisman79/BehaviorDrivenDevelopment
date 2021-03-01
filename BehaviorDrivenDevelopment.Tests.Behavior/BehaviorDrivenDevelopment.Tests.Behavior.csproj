@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentAssertions" Version="5.10.3" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+      <PackageReference Include="SpecFlow.xUnit" Version="3.7.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Hooks" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <SpecFlowFeatureFiles Remove="Features\step_definitions\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Features\step_definitions\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Features\step_definitions\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Features\step_definitions\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BehaviorDrivenDevelopment.Service\BehaviorDrivenDevelopment.Service.csproj" />
+    </ItemGroup>
+
+</Project>
